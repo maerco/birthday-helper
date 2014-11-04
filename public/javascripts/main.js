@@ -11,18 +11,15 @@ var disabledComments = initLocalStorageItem("disabledComments");
 var peopleInfo = initLocalStorageItem("peopleInfo");
 
 var defaultCommentTemplates = [
-  "Thank you so much {{name}}!",
-  "Thank you so much {{name}}!!",
-  "Thank you so much {{name}} :-)",
-  "Cheers {{name}}!",
-  "Cheers {{name}}!!",
-  "Thank you {{name}}!",
-  "Thank you {{name}}! :-)",
+  "Grazie Mille {{name}}!",
+  "Grazie Mille {{name}}!!",
+  "Grazie Mille {{name}} :-)",
+  "Grazie {{name}}!",
+  "Grazie {{name}}!!",
+  "Grazie Mille {{name}}!",
+  "Grazie Mille {{name}}! :-)",
   "Muchos gracias {{name}}!",
-  "Muchos gracias {{name}}!!",
-  "{{name}}, you rock. Thank you!",
-  "Thanks {{name}}!",
-  "Thanks {{name}}!!"
+  "Muchos gracias {{name}}!!"
 ];
 var commentTemplates = initLocalStorageItem("commentTemplates", defaultCommentTemplates);
 
@@ -408,7 +405,7 @@ function getBirthdayPostsOnWall(response, callback) {
           var log = false;
           var message = post.message;
           if (log) console.log("Processing message: '", message.toLowerCase(), "' from", from); 
-          var filters = ['happy','birthday','bday','feliz','wishes', 'hbty', 'hbd', 'great day'];
+          var filters = ['happy','birthday','buon compleanno','auguri','wishes', 'compleanno', 'great day'];
           for(var j = 0; j<filters.length; j++) {
             var filter = filters[j];
             if (log) {console.log("Processing filter:", filter)}
